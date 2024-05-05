@@ -33,3 +33,43 @@
 #   ansible.builtin.service:
 #     name: nginx
 #     state: restarted
+
+
+
+
+
+
+
+
+#OUTPUT
+
+# [ ec2-user@ip-172-31-29-250 ~/expense-ansible-roles-common ]$ ansible-playbook main.yaml -e component=frontend
+
+# PLAY [Configuring frontend Server] ***************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [mydevops-learning.cloud]
+
+# TASK [frontend : Install nginx] ******************************************************************************************************
+# ok: [mydevops-learning.cloud]
+
+# TASK [frontend : Start and Enable nginx] *********************************************************************************************
+# ok: [mydevops-learning.cloud]
+
+# TASK [frontend : Delete directory html] **********************************************************************************************
+# changed: [mydevops-learning.cloud]
+
+# TASK [frontend : Create directory html] **********************************************************************************************
+# changed: [mydevops-learning.cloud]
+
+# TASK [frontend : Download and Unzip file] ********************************************************************************************
+# changed: [mydevops-learning.cloud]
+
+# TASK [frontend : Copy the expense.conf] **********************************************************************************************
+# changed: [mydevops-learning.cloud]
+
+# RUNNING HANDLER [frontend : restart nginx] *******************************************************************************************
+# changed: [mydevops-learning.cloud]
+
+
+
