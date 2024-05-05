@@ -19,7 +19,7 @@ tasks:
 - name: check if mysql root password is already setup or not
   community.mysql.mysql_info:
     login_user: "{{login_user}}"
-    login_password: "{{mysql_root_password}}"
+    login_password: "{{login_password}}"
     login_host: "{{login_host}}"
     filter: version
   ignore_errors:  yes
@@ -30,5 +30,5 @@ tasks:
     msg:  "MySQL Register Output is: {{mysql_output}}"
 
 - name: setup root password now
-  ansible.builtin.command:  "mysql_secure_installation --set-root-pass {{mysql_root_password}}"
+  ansible.builtin.command:  "mysql_secure_installation --set-root-pass {{login_password}}"
   when: mysql_output.failed is true # don't give {{ }} in when condition
