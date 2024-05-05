@@ -1,5 +1,5 @@
 login_user: root
-login_password: "{{mysql_password}}"
+login_password: MyExpenseApp@1
 login_host: db.mydevops-learning.cloud
 DB_HOST: db.mydevops-learning.cloud
 app_location: /app
