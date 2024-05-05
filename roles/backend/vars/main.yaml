@@ -1,0 +1,6 @@
+login_user: root
+login_password: "{{mysql_password}}"
+login_host: db.mydevops-learning.cloud
+DB_HOST: db.mydevops-learning.cloud
+app_location: /app
+component: backend
